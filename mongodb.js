@@ -3,14 +3,7 @@ var mongoClient = mongodb.MongoClient;
 var dbUrl = "mongodb://srajput:password21$@ds062059.mlab.com:62059/srajputtest";
 var emp;
 
-//insertRecord();
-//updateRecord({ 'Name': 'Saurabh' }, { 'Age': 25 });
-//removeRecord({ 'Name': 'Saurabh' });
-//readRecords();
-//readRecord({ 'Name': 'Saurabh' });
-
-
-var mongodbObj = function () {
+var mongoDBAdapter = function () {
 
     var that = this;
 
@@ -121,4 +114,13 @@ var mongodbObj = function () {
     }
 };
 
-module.export = mongodbObj;
+//var ma = new mongoDBAdapter();
+//ma.readRecords();
+
+//insertRecord();
+//updateRecord({ 'Name': 'Saurabh' }, { 'Age': 25 });
+//removeRecord({ 'Name': 'Saurabh' });
+
+//readRecord({ 'Name': 'Saurabh' });
+
+module.exports = mongoDBAdapter;

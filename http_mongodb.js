@@ -1,5 +1,8 @@
 ﻿var http = require("http");
-var mongodb = require("./mongodb");
+var mongoDBAdapter = require("./mongodb");
+
+var obj = new mongoDBAdapter();
+
 
 var server = http.createServer(function (req, res) {
 
@@ -7,9 +10,11 @@ var server = http.createServer(function (req, res) {
 
     console.log(JSON.stringify(mongodb));
 
-    mongodb.readRecords();
+
 
     if (req.url == "employees") {
+
+        obj.readRecords();
 
     } else {
 
